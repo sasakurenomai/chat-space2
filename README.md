@@ -30,17 +30,16 @@
 - has_many :users, through: :users_groups
 
 
-## users_groupsテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
-
+|user|references|null: false, foreign_key: true|
+ 
 ### Association
-- belongs_to :user
 - belongs_to :group
-
+- belongs_to :user
 
 ## chatsテーブル
 
