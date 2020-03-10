@@ -1,0 +1,31 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__left-box
+      %h2.chat-main__header__left-box__current-group
+        sasakure
+      %ul.chat-main__header__left-box__member-list
+        %li.chat-main__headerleft-box__member-list__member
+          Member
+    .chat-main__header__edit-btn 
+      =link_to  "#",  class:  'edit'  do
+        Edit     
+  .chat-main__messages
+    .chat-main__messages__message
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker
+          masaoka
+        %p.chat-main__messages__message__upper-info__date
+          2020/3/9
+      %p.chat-main__messages__message__text
+        Hello!
+
+  .chat-main__form
+    %form.new-message
+      .input-box
+        %input{type: "text",  class: "input-box__text",  placeholder:  "type a message"}
+          %label{class: "input-box__image"}
+            =  icon('fas',  'image')
+            %input{type: "file",  class:  "input-box__image__file"}
+            
+      %input{type: "submit",  class:  "submit-btn",  value:  "Send"}
+      
