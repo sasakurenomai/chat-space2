@@ -1,0 +1,17 @@
+.chat-main__messages__message
+  .chat-main__messages__message__upper-info
+    %p.chat-main__messages__message__upper-info__talker
+      =  message.user.name
+    %p.chat-main__messages__message__upper-info__date
+      =  message.created_at.strftime("%Y年%m月%d日  %H時%M分")
+  .chat-main__messages__message__upper-info__delete
+    =  link_to  message_path(message),  method:  :delete,  class:  'delete'  do
+      Delete
+        
+.chat-main__messages__content  
+  -  if  message.body.present?
+    %p.chat-main__messages__message__text
+      =  message.body
+  =  image_tag  message.image,  class: 'chat-main__messages__content__image'  if  message.image.present?
+
+  

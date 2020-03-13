@@ -41,7 +41,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## chatsテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
