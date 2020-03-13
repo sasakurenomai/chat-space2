@@ -15,11 +15,11 @@
   .side-groups
     -  current_user.groups.each do |group|
       .side-groups__group
-        %p.side-groups__group__name
-          =  group.name
-        %p.side-groups__group__message
-          まだメッセージはありません
-
+        =  link_to  group_messages_path(group.id)  do
+          %p.side-groups__group__name
+            =  group.name
+          %p.side-groups__group__message
+            =  group.show_last_message
 
 
 
