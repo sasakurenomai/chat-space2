@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_group,  except: [:destroy]
   
-  
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
@@ -10,12 +9,15 @@ class MessagesController < ApplicationController
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージ送信完了！'
+      respond_to do |format|
+        format.json 
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージが空だよ！'
       render :index
     end
+    
   end
 
   def destroy
