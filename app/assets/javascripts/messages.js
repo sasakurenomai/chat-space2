@@ -16,7 +16,6 @@ $(function(){
               ${message.body}
             </p>
           </div>
-          <div class='chat-main__messages__message__upper-info__delete'>
           </div>
           <img src=${message.image} ></img>
         </div>`
@@ -67,5 +66,6 @@ $(function(){
     })
   });
 });
+
 
 
