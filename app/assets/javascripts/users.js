@@ -19,7 +19,7 @@ $(function() {
     `;
     $("#user-search-result").append(html);
   }
-
+ 
   function addDeleteUser(name, id) {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20200311044848) do
     t.index ["group_id"], name: "index_group_users_on_group_id", using: :btree
     t.index ["user_id"], name: "index_group_users_on_user_id", using: :btree
   end
-
+ 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false

@@ -5,3 +5,4 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 end
+ 

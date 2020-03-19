@@ -19,5 +19,5 @@ class Group < ApplicationRecord
   
 
 end
-
+ 
 

@@ -5,3 +5,4 @@ class GroupUserTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+ 

@@ -7,3 +7,4 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+ 
