@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'arn:aws:s3:::sasakure01'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/arn:aws:s3:::sasakure01'
+  config.fog_directory  = 'sasakure01'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/sasakure01'
 end
