@@ -2,8 +2,8 @@
 lock "~> 3.12.1"
 
 set :application, "chat-space2"
-set :repo_url, "git@github.com:sasakurenomai/chat-space2.git"
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :repo_url, 'git@github.com:sasakurenomai/chat-space2.git'
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
 
