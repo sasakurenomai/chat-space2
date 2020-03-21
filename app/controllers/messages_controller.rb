@@ -20,11 +20,6 @@ class MessagesController < ApplicationController
     
   end
 
-  def destroy
-    Message.destroy(params[:id])
-    redirect_to root_path, notice: 'メッセージ削除完了！'
-  end
-
 private
 
   def message_params
