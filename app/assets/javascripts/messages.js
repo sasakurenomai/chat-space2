@@ -51,6 +51,9 @@ $(function(){
     };
     return html;
   };
+
+
+  
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -75,6 +78,7 @@ $(function(){
     })
   });
 
+
   
   var reloadMessages = function() {
     
@@ -85,6 +89,7 @@ $(function(){
       type: 'get',
       dataType: 'json', 
       data: {id: last_message_id}
+      
     })
   
     .done(function(messages) {
@@ -107,6 +112,7 @@ $(function(){
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
+    
    } 
 
 });
